@@ -1,6 +1,6 @@
 {
-  "name": "i-have-adhd",
+  "name": "get-to-the-fucking-point-claude",
   "version": "0.2.0",
-  "description": "Shape Gemini CLI output for an ADHD reader: lead with the next action, number steps, suppress tangents, restate state, make wins visible.",
+  "description": "Stop burying the answer. Lead with the next action, number the steps, cut the tangents, restate state, and be bluntly honest instead of a suck-up.",
   "contextFileName": "GEMINI.md"
 }

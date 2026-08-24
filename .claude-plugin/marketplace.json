@@ -1,14 +1,14 @@
 {
   "$schema": "https://www.schemastore.org/claude-code-marketplace.json",
-  "name": "i-have-adhd",
-  "description": "Shape Claude Code output for an ADHD reader. Action-first, numbered steps, no tangents.",
+  "name": "get-to-the-fucking-point-claude",
+  "description": "Get to the fucking point. Action-first, numbered steps, no ass-kissing.",
   "owner": {
-    "name": "Ayoub G."
+    "name": "quaz579"
   },
   "plugins": [
     {
-      "name": "i-have-adhd",
-      "description": "Action-first, ADHD-friendly output shaping for Claude Code.",
+      "name": "get-to-the-fucking-point-claude",
+      "description": "Bluntly honest, action-first output shaping for Claude Code.",
       "source": "./",
       "category": "productivity"
     }

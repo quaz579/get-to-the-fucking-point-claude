@@ -1,11 +1,11 @@
 <p align="center">
-  <img src="../../logo.png" alt="i-have-adhd" width="140" />
+  <img src="../../logo.png" alt="get-to-the-fucking-point-claude" width="140" />
 </p>
 <p align="center">
   <strong align="center">ADHD に配慮した出力。ADHD の診断は不要です！</strong>
 </p>
 <p align="center">
-  <a href="../../LICENSE"><img src="https://img.shields.io/github/license/ayghri/i-have-adhd?style=flat" alt="ライセンス"></a>
+  <a href="../../LICENSE"><img src="https://img.shields.io/github/license/quaz579/get-to-the-fucking-point-claude?style=flat" alt="ライセンス"></a>
 </p>
 
 <p align="center">
@@ -59,7 +59,7 @@
 
 ## ルール
 
-ルールは 10 個です。全文は [SKILL.md](../../skills/i-have-adhd/SKILL.md) にあります。
+ルールは 10 個です。全文は [SKILL.md](../../skills/get-to-the-fucking-point-claude/SKILL.md) にあります。
 
 1. 次に取る行動から始める。
 2. 複数手順のタスクには番号を付ける。
@@ -74,16 +74,16 @@
 
 ## カスタマイズ
 
-リポジトリを Fork し、`skills/i-have-adhd/SKILL.md` を編集してから、自分のコピーに切り替えます。
+リポジトリを Fork し、`skills/get-to-the-fucking-point-claude/SKILL.md` を編集してから、自分のコピーに切り替えます。
 
 ```bash
-claude plugin uninstall i-have-adhd            # まず上流のコピーを削除：
-claude plugin marketplace remove i-have-adhd   # fork と上流では同じ名前が使われる
-claude plugin marketplace add <your-username>/i-have-adhd
-claude plugin install i-have-adhd@i-have-adhd
+claude plugin uninstall get-to-the-fucking-point-claude            # まず上流のコピーを削除：
+claude plugin marketplace remove get-to-the-fucking-point-claude   # fork と上流では同じ名前が使われる
+claude plugin marketplace add <your-username>/get-to-the-fucking-point-claude
+claude plugin install get-to-the-fucking-point-claude@get-to-the-fucking-point-claude
 ```
 
-Claude Code を再起動し、`/i-have-adhd` をもう一度呼び出してください。
+Claude Code を再起動し、`/get-to-the-fucking-point-claude` をもう一度呼び出してください。
 
 ## クレジット
 

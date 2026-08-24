@@ -1,14 +1,14 @@
 {
-  "name": "i-have-adhd",
+  "name": "get-to-the-fucking-point-claude",
   "interface": {
-    "displayName": "I Have ADHD"
+    "displayName": "Get To The Fucking Point"
   },
   "plugins": [
     {
-      "name": "i-have-adhd",
+      "name": "get-to-the-fucking-point-claude",
       "source": {
         "source": "url",
-        "url": "https://github.com/ayghri/i-have-adhd.git",
+        "url": "https://github.com/quaz579/get-to-the-fucking-point-claude.git",
         "ref": "main"
       },
       "policy": {

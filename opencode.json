@@ -1,4 +1,4 @@
 {
   "$schema": "https://opencode.ai/config.json",
-  "plugin": ["./.opencode/plugins/i-have-adhd.mjs"]
+  "plugin": ["./.opencode/plugins/get-to-the-fucking-point-claude.mjs"]
 }

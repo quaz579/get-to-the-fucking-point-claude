@@ -1,11 +1,11 @@
 <p align="center">
-  <img src="../../logo.png" alt="i-have-adhd" width="140" />
+  <img src="../../logo.png" alt="get-to-the-fucking-point-claude" width="140" />
 </p>
 <p align="center">
   <strong align="center">Đầu ra thân thiện với người có ADHD. Không cần chẩn đoán ADHD!</strong>
 </p>
 <p align="center">
-  <a href="../../LICENSE"><img src="https://img.shields.io/github/license/ayghri/i-have-adhd?style=flat" alt="Giấy phép"></a>
+  <a href="../../LICENSE"><img src="https://img.shields.io/github/license/quaz579/get-to-the-fucking-point-claude?style=flat" alt="Giấy phép"></a>
 </p>
 
 <p align="center">
@@ -59,7 +59,7 @@ Một skill dành cho trợ lý lập trình, giúp câu trả lời đi thẳng
 
 ## Các quy tắc
 
-10 quy tắc. Nội dung chi tiết tại [SKILL.md](../../skills/i-have-adhd/SKILL.md).
+10 quy tắc. Nội dung chi tiết tại [SKILL.md](../../skills/get-to-the-fucking-point-claude/SKILL.md).
 
 1. Bắt đầu ngay bằng hành động tiếp theo.
 2. Đánh số các công việc gồm nhiều bước.
@@ -74,16 +74,16 @@ Một skill dành cho trợ lý lập trình, giúp câu trả lời đi thẳng
 
 ## Tùy chỉnh
 
-Fork repo, chỉnh sửa `skills/i-have-adhd/SKILL.md`, sau đó chuyển sang dùng bản của bạn:
+Fork repo, chỉnh sửa `skills/get-to-the-fucking-point-claude/SKILL.md`, sau đó chuyển sang dùng bản của bạn:
 
 ```bash
-claude plugin uninstall i-have-adhd            # gỡ bản chính trước:
-claude plugin marketplace remove i-have-adhd   # bản fork và bản chính dùng chung tên
-claude plugin marketplace add <username-của-bạn>/i-have-adhd
-claude plugin install i-have-adhd@i-have-adhd
+claude plugin uninstall get-to-the-fucking-point-claude            # gỡ bản chính trước:
+claude plugin marketplace remove get-to-the-fucking-point-claude   # bản fork và bản chính dùng chung tên
+claude plugin marketplace add <username-của-bạn>/get-to-the-fucking-point-claude
+claude plugin install get-to-the-fucking-point-claude@get-to-the-fucking-point-claude
 ```
 
-Khởi động lại Claude Code, sau đó gọi lại `/i-have-adhd`.
+Khởi động lại Claude Code, sau đó gọi lại `/get-to-the-fucking-point-claude`.
 
 ## Ghi nhận tác giả (Credits)
 

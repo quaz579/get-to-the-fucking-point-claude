@@ -1,11 +1,11 @@
 <p align="center">
-  <img src="../../logo.png" alt="i-have-adhd" width="140" />
+  <img src="../../logo.png" alt="get-to-the-fucking-point-claude" width="140" />
 </p>
 <p align="center">
   <strong align="center">ADHD 친화적인 출력. ADHD 진단은 필요 없어요!</strong>
 </p>
 <p align="center">
-  <a href="../../LICENSE"><img src="https://img.shields.io/github/license/ayghri/i-have-adhd?style=flat" alt="License"></a>
+  <a href="../../LICENSE"><img src="https://img.shields.io/github/license/quaz579/get-to-the-fucking-point-claude?style=flat" alt="License"></a>
 </p>
 
 <p align="center">
@@ -59,7 +59,7 @@
 
 ## 규칙
 
-10가지 규칙. 전문은 [SKILL.md](../../skills/i-have-adhd/SKILL.md)에 있습니다.
+10가지 규칙. 전문은 [SKILL.md](../../skills/get-to-the-fucking-point-claude/SKILL.md)에 있습니다.
 
 1. 다음 행동부터 말하기.
 2. 다단계 작업은 번호로.
@@ -74,16 +74,16 @@
 
 ## 커스터마이즈
 
-저장소를 포크해 `skills/i-have-adhd/SKILL.md`를 수정한 다음, 본인 복사본으로 교체하세요:
+저장소를 포크해 `skills/get-to-the-fucking-point-claude/SKILL.md`를 수정한 다음, 본인 복사본으로 교체하세요:
 
 ```bash
-claude plugin uninstall i-have-adhd            # 먼저 업스트림 버전 제거
-claude plugin marketplace remove i-have-adhd   # 포크와 업스트림이 같은 이름을 씁니다
-claude plugin marketplace add <your-username>/i-have-adhd
-claude plugin install i-have-adhd@i-have-adhd
+claude plugin uninstall get-to-the-fucking-point-claude            # 먼저 업스트림 버전 제거
+claude plugin marketplace remove get-to-the-fucking-point-claude   # 포크와 업스트림이 같은 이름을 씁니다
+claude plugin marketplace add <your-username>/get-to-the-fucking-point-claude
+claude plugin install get-to-the-fucking-point-claude@get-to-the-fucking-point-claude
 ```
 
-Claude Code를 재시작한 뒤 `/i-have-adhd`를 다시 호출하세요.
+Claude Code를 재시작한 뒤 `/get-to-the-fucking-point-claude`를 다시 호출하세요.
 
 ## 크레딧
 

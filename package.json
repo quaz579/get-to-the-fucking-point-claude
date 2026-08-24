@@ -1,16 +1,16 @@
 {
-  "name": "i-have-adhd",
+  "name": "get-to-the-fucking-point-claude",
   "version": "0.2.0",
-  "description": "Shape output for a reader with ADHD: lead with the next action, number multi-step work, restate state across turns, suppress tangents, give specific time estimates, make wins visible.",
+  "description": "Stop burying the answer. Lead with the next action, number multi-step work, restate state across turns, kill tangents, give real time estimates, and show the wins. Bluntly honest, zero ass-kissing.",
   "license": "MIT",
-  "homepage": "https://github.com/ayghri/i-have-adhd",
+  "homepage": "https://github.com/quaz579/get-to-the-fucking-point-claude",
   "private": true,
   "keywords": ["pi-package"],
   "omp": {
-    "extensions": ["./extensions/i-have-adhd.ts"]
+    "extensions": ["./extensions/get-to-the-fucking-point-claude.ts"]
   },
   "pi": {
-    "extensions": ["./extensions/i-have-adhd.ts"],
+    "extensions": ["./extensions/get-to-the-fucking-point-claude.ts"],
     "skills": ["./skills"]
   }
 }

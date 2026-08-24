@@ -16,21 +16,21 @@ const SKILL_PATH = join(
   EXTENSION_DIR,
   "..",
   "skills",
-  "i-have-adhd",
+  "get-to-the-fucking-point-claude",
   "SKILL.md",
 );
-const STATE_ENTRY_TYPE = "i-have-adhd-state";
-const RULES_MESSAGE_TYPE = "i-have-adhd-rules";
-const DISABLED_MESSAGE_TYPE = "i-have-adhd-disabled";
-const STATUS_KEY = "i-have-adhd";
-const DISABLE_CONFIRMATION = "ADHD mode disabled.";
+const STATE_ENTRY_TYPE = "get-to-the-fucking-point-claude-state";
+const RULES_MESSAGE_TYPE = "get-to-the-fucking-point-claude-rules";
+const DISABLED_MESSAGE_TYPE = "get-to-the-fucking-point-claude-disabled";
+const STATUS_KEY = "get-to-the-fucking-point-claude";
+const DISABLE_CONFIRMATION = "Blunt mode disabled.";
 const STOP_PHRASES = new Set(["stop adhd mode", "normal mode"]);
 const RULES_HEADER =
-  'ADHD MODE ACTIVE. The ruleset below applies to every response until turned off. "stop adhd mode" or "normal mode" turns it off for this session.';
+  'BLUNT MODE ACTIVE. The ruleset below applies to every response until turned off. "stop adhd mode" or "normal mode" turns it off for this session.';
 const DISABLED_NOTICE =
-  "ADHD MODE OFF. Ignore the i-have-adhd ruleset injected earlier in this conversation and return to your default response style.";
+  "BLUNT MODE OFF. Ignore the get-to-the-fucking-point-claude ruleset injected earlier in this conversation and return to your default response style.";
 
-type AdhdModeState = {
+type BluntModeState = {
   enabled: boolean;
 };
 
@@ -51,13 +51,13 @@ function loadRules(): string {
   } catch (error) {
     const reason = error instanceof Error ? error.message : String(error);
     throw new Error(
-      `Unable to load i-have-adhd rules from ${SKILL_PATH}: ${reason}`,
+      `Unable to load get-to-the-fucking-point-claude rules from ${SKILL_PATH}: ${reason}`,
     );
   }
 
   const rules = stripFrontmatter(content);
   if (!rules) {
-    throw new Error(`The i-have-adhd rules file is empty: ${SKILL_PATH}`);
+    throw new Error(`The get-to-the-fucking-point-claude rules file is empty: ${SKILL_PATH}`);
   }
 
   return rules;
@@ -71,7 +71,7 @@ function getSavedState(ctx: ExtensionContext): boolean | undefined {
       continue;
     }
 
-    const data = entry.data as Partial<AdhdModeState> | undefined;
+    const data = entry.data as Partial<BluntModeState> | undefined;
     if (typeof data?.enabled === "boolean") {
       savedState = data.enabled;
     }
@@ -95,9 +95,9 @@ function rulesAreInContext(ctx: ExtensionContext): boolean {
   );
 }
 
-export default function iHaveAdhdExtension(pi: ExtensionAPI) {
+export default function getToThePointExtension(pi: ExtensionAPI) {
   const rules = loadRules();
-  const alwaysOnFlag = join(getAgentDir(), ".i-have-adhd-always");
+  const alwaysOnFlag = join(getAgentDir(), ".get-to-the-fucking-point-claude-always");
   let enabled = false;
 
   const updateStatus = (ctx: ExtensionContext): void => {
@@ -107,7 +107,7 @@ export default function iHaveAdhdExtension(pi: ExtensionAPI) {
     }
 
     const dot = ctx.ui.theme.fg("success", "●");
-    const label = ctx.ui.theme.fg("accent", "ADHD ON");
+    const label = ctx.ui.theme.fg("accent", "BLUNT ON");
     ctx.ui.setStatus(STATUS_KEY, `${dot} ${label}`);
   };
 
@@ -154,20 +154,20 @@ export default function iHaveAdhdExtension(pi: ExtensionAPI) {
 
   const setEnabled = (nextEnabled: boolean, ctx: ExtensionContext): void => {
     enabled = nextEnabled;
-    pi.appendEntry(STATE_ENTRY_TYPE, { enabled } satisfies AdhdModeState);
+    pi.appendEntry(STATE_ENTRY_TYPE, { enabled } satisfies BluntModeState);
     updateStatus(ctx);
     syncContext(ctx);
-    ctx.ui.notify(`ADHD mode ${enabled ? "enabled" : "disabled"}`, "info");
+    ctx.ui.notify(`Blunt mode ${enabled ? "enabled" : "disabled"}`, "info");
   };
 
   pi.registerFlag("adhd", {
-    description: "Start with ADHD-friendly output enabled",
+    description: "Start with blunt, no-bullshit output enabled",
     type: "boolean",
     default: false,
   });
 
-  pi.registerCommand("i-have-adhd", {
-    description: "Toggle ADHD-friendly output for this session",
+  pi.registerCommand("get-to-the-fucking-point-claude", {
+    description: "Toggle blunt, no-bullshit output for this session",
     handler: async (args, ctx) => {
       const argument = args.trim().toLowerCase();
 
@@ -186,7 +186,7 @@ export default function iHaveAdhdExtension(pi: ExtensionAPI) {
         return;
       }
 
-      ctx.ui.notify("Usage: /i-have-adhd [on|off]", "warning");
+      ctx.ui.notify("Usage: /get-to-the-fucking-point-claude [on|off]", "warning");
     },
   });
 
@@ -195,7 +195,7 @@ export default function iHaveAdhdExtension(pi: ExtensionAPI) {
 
     // Keep the built-in skill command working as an alias without letting Pi
     // expand a second copy of the same rules into the conversation.
-    if (input === "/skill:i-have-adhd") {
+    if (input === "/skill:get-to-the-fucking-point-claude") {
       setEnabled(true, ctx);
       return { action: "handled" };
     }

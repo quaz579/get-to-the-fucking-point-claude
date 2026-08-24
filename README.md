@@ -1,40 +1,28 @@
 <p align="center">
-  <img src="./logo.png" alt="i-have-adhd" width="140" />
+  <img src="./logo.png" alt="get-to-the-fucking-point-claude" width="140" />
 </p>
 <p align="center">
-  <strong align="center">ADHD-friendly outputs. No ADHD diagnosis needed!</strong>
+  <strong align="center">Make your coding assistant get to the fucking point. No preamble, no ass-kissing, no "Great question!"</strong>
 </p>
 <p align="center">
-  <a href="LICENSE"><img src="https://img.shields.io/github/license/ayghri/i-have-adhd?style=flat" alt="License"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/github/license/quaz579/get-to-the-fucking-point-claude?style=flat" alt="License"></a>
 </p>
-
-<p align="center">
-  <strong title="English" aria-label="English">🇬🇧</strong> ·
-  <a href=".github/readme/README.zh-CN.md" title="简体中文" aria-label="简体中文">🇨🇳</a> ·
-  <a href=".github/readme/README.pt-BR.md" title="Português (Brasil)" aria-label="Português (Brasil)">🇧🇷</a> ·
-  <a href=".github/readme/README.ja.md" title="日本語" aria-label="日本語">🇯🇵</a> ·
-  <a href=".github/readme/README.vi.md" title="Tiếng Việt" aria-label="Tiếng Việt">🇻🇳</a> ·
-  <a href=".github/readme/README.ko.md" title="한국어" aria-label="한국어">🇰🇷</a>
-</p>
-
 
 ## Install
 
 Copy/paste into your CLI prompt:
 
 ```text
-Install the i-have-adhd skill/plugin from https://github.com/ayghri/i-have-adhd, refer to the repo's AGENTS.md for instructions.
+Install the get-to-the-fucking-point-claude skill/plugin from https://github.com/quaz579/get-to-the-fucking-point-claude, refer to the repo's AGENTS.md for instructions.
 ```
 
 Or 🔗 [check the installation instructions](INSTALL.md).
 
 ## What it does
 
-A skill for your coding assistant that stops it from burying the answer. Action first. Steps numbered. No "Hope this helps!"
-
+A skill for your coding assistant that stops it from burying the answer under a pile of throat-clearing. Action first. Steps numbered. Blunt honesty instead of flattery. Zero "Hope this helps!"
 
 ## What changes
-
 
 <table>
 <tr>
@@ -62,38 +50,41 @@ A skill for your coding assistant that stops it from burying the answer. Action 
 </tr>
 </table>
 
-
 ## The rules
 
-10 rules. Full text in [SKILL.md](./skills/i-have-adhd/SKILL.md).
+10 rules. Full text in [SKILL.md](./skills/get-to-the-fucking-point-claude/SKILL.md).
 
-1. Lead with the next action.
+1. Lead with the fucking answer.
 2. Number multi-step tasks.
-3. End with one concrete next step.
-4. Suppress tangents.
+3. End with one concrete next action.
+4. Kill tangents on sight.
 5. Restate state every turn.
-6. Specific time estimates (minutes, not "a bit").
-7. Make wins visible.
-8. Matter-of-fact errors.
+6. Real time estimates (minutes, not "a bit").
+7. Show the win, don't bury it.
+8. Be bluntly honest — errors and everything else.
 9. Cap lists at 5 items.
-10. No preamble. No recap. No closers.
+10. No preamble. No recap. No ass-kissing.
+
+## Turn it off
+
+It stays on until you tell it to stop. Say **"normal mode"** (or "chill out") and it goes back to being polite and long-winded like everyone else.
 
 ## Tune it
 
-Fork, edit `skills/i-have-adhd/SKILL.md`, then swap your copy in:
+Fork, edit `skills/get-to-the-fucking-point-claude/SKILL.md`, then swap your copy in:
 
 ```bash
-claude plugin uninstall i-have-adhd            # drop the upstream copy first:
-claude plugin marketplace remove i-have-adhd   # fork and upstream share both names
-claude plugin marketplace add <your-username>/i-have-adhd
-claude plugin install i-have-adhd@i-have-adhd
+claude plugin uninstall get-to-the-fucking-point-claude            # drop the upstream copy first:
+claude plugin marketplace remove get-to-the-fucking-point-claude   # fork and upstream share both names
+claude plugin marketplace add <your-username>/get-to-the-fucking-point-claude
+claude plugin install get-to-the-fucking-point-claude@get-to-the-fucking-point-claude
 ```
 
-Restart Claude Code, then re-invoke `/i-have-adhd`.
+Restart Claude Code, then re-invoke `/get-to-the-fucking-point-claude`.
 
 ## Credits
 
-Loosely based on *The Adult ADHD Tool Kit* by J. Russell Ramsay and Anthony L. Rostain. Adapted for how an LLM should respond, not how a human should organize their day.
+Shamelessly forked from [ayghri/i-have-adhd](https://github.com/ayghri/i-have-adhd), which is the same idea with better manners. Go star the original — it did the hard part.
 
 ## License
 

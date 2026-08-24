@@ -6,7 +6,7 @@
 ### Install
 
 ```bash
-agy plugin install https://github.com/ayghri/i-have-adhd
+agy plugin install https://github.com/quaz579/get-to-the-fucking-point-claude
 ```
 
 ### Verify
@@ -18,17 +18,17 @@ agy plugin list
 ### Update
 
 ```bash
-agy plugin uninstall i-have-adhd
-agy plugin install https://github.com/ayghri/i-have-adhd
+agy plugin uninstall get-to-the-fucking-point-claude
+agy plugin install https://github.com/quaz579/get-to-the-fucking-point-claude
 ```
 
 ### Uninstall
 
 ```bash
-agy plugin uninstall i-have-adhd
+agy plugin uninstall get-to-the-fucking-point-claude
 ```
 
-Or keep it installed and turn it off: `agy plugin disable i-have-adhd`.
+Or keep it installed and turn it off: `agy plugin disable get-to-the-fucking-point-claude`.
 
 ### Always-on (optional)
 
@@ -61,11 +61,11 @@ Exceptions: explain fully when asked to explain. Confirm before destructive acti
 ### Install
 
 ```bash
-claude plugin marketplace add ayghri/i-have-adhd
-claude plugin install i-have-adhd@i-have-adhd
+claude plugin marketplace add quaz579/get-to-the-fucking-point-claude
+claude plugin install get-to-the-fucking-point-claude@get-to-the-fucking-point-claude
 ```
 
-Type `/i-have-adhd`.
+Type `/get-to-the-fucking-point-claude`.
 
 ### Verify
 
@@ -76,30 +76,30 @@ claude plugin list
 ### Update
 
 ```bash
-claude plugin marketplace update i-have-adhd
+claude plugin marketplace update get-to-the-fucking-point-claude
 ```
 
 ### Uninstall
 
 ```bash
-claude plugin uninstall i-have-adhd
-claude plugin marketplace remove i-have-adhd
+claude plugin uninstall get-to-the-fucking-point-claude
+claude plugin marketplace remove get-to-the-fucking-point-claude
 ```
 
-Or keep it installed and turn it off: `claude plugin disable i-have-adhd`.
+Or keep it installed and turn it off: `claude plugin disable get-to-the-fucking-point-claude`.
 
 ### Always-on (optional)
 
-A `SessionStart` hook loads the full ruleset at the start of every session, no `/i-have-adhd` needed:
+A `SessionStart` hook loads the full ruleset at the start of every session, no `/get-to-the-fucking-point-claude` needed:
 
 ```bash
-touch ~/.claude/.i-have-adhd-always
+touch ~/.claude/.get-to-the-fucking-point-claude-always
 ```
 
 Back to on-demand:
 
 ```bash
-rm ~/.claude/.i-have-adhd-always
+rm ~/.claude/.get-to-the-fucking-point-claude-always
 ```
 
 The hook only fires when the flag file exists, so installing the plugin changes nothing by itself. Honors `$CLAUDE_CONFIG_DIR` if you've moved your config dir. "stop adhd mode" still turns it off for the current session.
@@ -113,11 +113,11 @@ The hook only fires when the flag file exists, so installing the plugin changes 
 ### Install
 
 ```bash
-codex plugin marketplace add ayghri/i-have-adhd --ref main
-codex plugin add i-have-adhd@i-have-adhd
+codex plugin marketplace add quaz579/get-to-the-fucking-point-claude --ref main
+codex plugin add get-to-the-fucking-point-claude@get-to-the-fucking-point-claude
 ```
 
-Invoke the skill explicitly by typing `$i-have-adhd`. Codex will not activate
+Invoke the skill explicitly by typing `$get-to-the-fucking-point-claude`. Codex will not activate
 it automatically.
 
 ### Verify
@@ -129,16 +129,16 @@ codex plugin list
 ### Update
 
 ```bash
-codex plugin marketplace upgrade i-have-adhd
-codex plugin remove i-have-adhd
-codex plugin add i-have-adhd@i-have-adhd
+codex plugin marketplace upgrade get-to-the-fucking-point-claude
+codex plugin remove get-to-the-fucking-point-claude
+codex plugin add get-to-the-fucking-point-claude@get-to-the-fucking-point-claude
 ```
 
 ### Uninstall
 
 ```bash
-codex plugin remove i-have-adhd
-codex plugin marketplace remove i-have-adhd
+codex plugin remove get-to-the-fucking-point-claude
+codex plugin marketplace remove get-to-the-fucking-point-claude
 ```
 
 ### Always-on (optional)
@@ -175,16 +175,16 @@ Gemini CLI has no plugin marketplace, so there are two native routes: a **custom
 
 ```bash
 mkdir -p ~/.gemini/commands
-curl -fsSL https://raw.githubusercontent.com/ayghri/i-have-adhd/main/skills/i-have-adhd/agents/gemini.toml \
-  -o ~/.gemini/commands/i-have-adhd.toml
+curl -fsSL https://raw.githubusercontent.com/quaz579/get-to-the-fucking-point-claude/main/skills/get-to-the-fucking-point-claude/agents/gemini.toml \
+  -o ~/.gemini/commands/get-to-the-fucking-point-claude.toml
 ```
 
-Start a new session, type `/i-have-adhd`. It stays on for that session.
+Start a new session, type `/get-to-the-fucking-point-claude`. It stays on for that session.
 
 ### Install (extension, always-on)
 
 ```bash
-gemini extensions install https://github.com/ayghri/i-have-adhd
+gemini extensions install https://github.com/quaz579/get-to-the-fucking-point-claude
 ```
 
 The extension loads `GEMINI.md`, which imports the full skill, so the rules apply from message one. `git` must be installed.
@@ -193,23 +193,23 @@ The extension loads `GEMINI.md`, which imports the full skill, so the rules appl
 
 ```bash
 gemini extensions list          # extension route
-ls ~/.gemini/commands           # command route: i-have-adhd.toml present
+ls ~/.gemini/commands           # command route: get-to-the-fucking-point-claude.toml present
 ```
 
-Or type `/` in a session and confirm `i-have-adhd` is listed.
+Or type `/` in a session and confirm `get-to-the-fucking-point-claude` is listed.
 
 ### Update
 
 ```bash
-gemini extensions update i-have-adhd    # extension route
+gemini extensions update get-to-the-fucking-point-claude    # extension route
 # command route: re-run the curl above
 ```
 
 ### Uninstall
 
 ```bash
-gemini extensions uninstall i-have-adhd    # extension route
-rm ~/.gemini/commands/i-have-adhd.toml     # command route
+gemini extensions uninstall get-to-the-fucking-point-claude    # extension route
+rm ~/.gemini/commands/get-to-the-fucking-point-claude.toml     # command route
 ```
 
 </details>
@@ -222,21 +222,21 @@ Copilot reads Agent Skills natively: the same `SKILL.md`, no conversion. It scan
 ### Install
 
 ```bash
-npx skills add ayghri/i-have-adhd -a github-copilot        # this project
-npx skills add ayghri/i-have-adhd -a github-copilot -g     # all projects
+npx skills add quaz579/get-to-the-fucking-point-claude -a github-copilot        # this project
+npx skills add quaz579/get-to-the-fucking-point-claude -a github-copilot -g     # all projects
 ```
 
 Without the CLI, copy the skill folder into any directory Copilot scans:
 
 ```bash
-git clone https://github.com/ayghri/i-have-adhd
+git clone https://github.com/quaz579/get-to-the-fucking-point-claude
 mkdir -p ~/.copilot/skills
-cp -R i-have-adhd/skills/i-have-adhd ~/.copilot/skills/
+cp -R get-to-the-fucking-point-claude/skills/get-to-the-fucking-point-claude ~/.copilot/skills/
 ```
 
 ### Verify
 
-Type `/` in the chat input and confirm `i-have-adhd` appears. Or:
+Type `/` in the chat input and confirm `get-to-the-fucking-point-claude` appears. Or:
 
 ```bash
 npx skills list
@@ -246,7 +246,7 @@ npx skills ls -g    # if installed globally
 ### Update
 
 ```bash
-npx skills update i-have-adhd
+npx skills update get-to-the-fucking-point-claude
 ```
 
 Or re-copy the folder after `git pull`.
@@ -254,14 +254,14 @@ Or re-copy the folder after `git pull`.
 ### Uninstall
 
 ```bash
-npx skills remove i-have-adhd
+npx skills remove get-to-the-fucking-point-claude
 ```
 
-Or delete the `i-have-adhd` folder from the skills directory it landed in.
+Or delete the `get-to-the-fucking-point-claude` folder from the skills directory it landed in.
 
 ### Activation note
 
-Copilot respects `disable-model-invocation`: nothing applies until you invoke the skill, same as Claude Code (tested in [#60](https://github.com/ayghri/i-have-adhd/pull/60)).
+Copilot respects `disable-model-invocation`: nothing applies until you invoke the skill, same as Claude Code (tested in [#60](https://github.com/quaz579/get-to-the-fucking-point-claude/pull/60)).
 
 ### Always-on (optional)
 
@@ -295,17 +295,17 @@ Exceptions: explain fully when asked to explain. Confirm before destructive acti
 ### Install
 
 ```bash
-hermes skills install ayghri/i-have-adhd/skills/i-have-adhd
+hermes skills install quaz579/get-to-the-fucking-point-claude/skills/get-to-the-fucking-point-claude
 ```
 
-Type `/i-have-adhd`. The skill installs into `~/.hermes/skills/` and is exposed as a slash command at the next session start.
+Type `/get-to-the-fucking-point-claude`. The skill installs into `~/.hermes/skills/` and is exposed as a slash command at the next session start.
 
 Prefer to browse first? Add this repo as a skill source (a "tap"), then search and install:
 
 ```bash
-hermes skills tap add ayghri/i-have-adhd
+hermes skills tap add quaz579/get-to-the-fucking-point-claude
 hermes skills search adhd
-hermes skills install ayghri/i-have-adhd/skills/i-have-adhd
+hermes skills install quaz579/get-to-the-fucking-point-claude/skills/get-to-the-fucking-point-claude
 ```
 
 ### Verify
@@ -317,16 +317,16 @@ hermes skills list
 ### Update
 
 ```bash
-hermes skills update i-have-adhd
+hermes skills update get-to-the-fucking-point-claude
 ```
 
 ### Uninstall
 
 ```bash
-hermes skills uninstall i-have-adhd
+hermes skills uninstall get-to-the-fucking-point-claude
 ```
 
-Or remove the tap too: `hermes skills tap remove ayghri/i-have-adhd`.
+Or remove the tap too: `hermes skills tap remove quaz579/get-to-the-fucking-point-claude`.
 
 ### Always-on (optional)
 
@@ -362,10 +362,10 @@ Start a Kimi Code session, then:
 
 1. Run `/plugins`.
 2. Choose **Custom**.
-3. Paste `https://github.com/ayghri/i-have-adhd` and press `Enter`.
+3. Paste `https://github.com/quaz579/get-to-the-fucking-point-claude` and press `Enter`.
 4. Choose **Trust and install**.
 
-Use slash command `/skill:i-have-adhd` to invoke the skill explicitly.
+Use slash command `/skill:get-to-the-fucking-point-claude` to invoke the skill explicitly.
 
 ### Update
 
@@ -381,20 +381,20 @@ Use slash command `/skill:i-have-adhd` to invoke the skill explicitly.
 <details>
 <summary><strong>OpenCode</strong></summary>
 
-OpenCode loads this repository as a server plugin: `.opencode/plugins/i-have-adhd.mjs` registers the `skills/` entry point and the `/i-have-adhd` command, and injects the ruleset when always-on is enabled. OpenCode also reads `skills/` natively, so the skill still works even without the plugin — the plugin adds the `/i-have-adhd` command and the always-on flag.
+OpenCode loads this repository as a server plugin: `.opencode/plugins/get-to-the-fucking-point-claude.mjs` registers the `skills/` entry point and the `/get-to-the-fucking-point-claude` command, and injects the ruleset when always-on is enabled. OpenCode also reads `skills/` natively, so the skill still works even without the plugin — the plugin adds the `/get-to-the-fucking-point-claude` command and the always-on flag.
 
 ### Install
 
 Clone the repo and point OpenCode at the plugin. An absolute path shares one checkout across every project:
 
 ```bash
-git clone https://github.com/ayghri/i-have-adhd ~/.config/opencode/vendor/i-have-adhd
+git clone https://github.com/quaz579/get-to-the-fucking-point-claude ~/.config/opencode/vendor/get-to-the-fucking-point-claude
 ```
 
 Add to your `opencode.json` (global: `~/.config/opencode/opencode.json`):
 
 ```json
-{ "plugin": ["/absolute/path/to/i-have-adhd/.opencode/plugins/i-have-adhd.mjs"] }
+{ "plugin": ["/absolute/path/to/get-to-the-fucking-point-claude/.opencode/plugins/get-to-the-fucking-point-claude.mjs"] }
 ```
 
 Or run OpenCode from the checkout — it ships a root `opencode.json` with the plugin already wired up.
@@ -402,19 +402,19 @@ Or run OpenCode from the checkout — it ships a root `opencode.json` with the p
 Start a new session and turn on ADHD-friendly output for the session:
 
 ```text
-/i-have-adhd
+/get-to-the-fucking-point-claude
 ```
 
 Rules stay on until `stop adhd mode` or `normal mode`.
 
 ### Verify
 
-Start OpenCode, type `/`, and confirm `i-have-adhd` appears in the command list.
+Start OpenCode, type `/`, and confirm `get-to-the-fucking-point-claude` appears in the command list.
 
 ### Update
 
 ```bash
-git -C ~/.config/opencode/vendor/i-have-adhd pull
+git -C ~/.config/opencode/vendor/get-to-the-fucking-point-claude pull
 ```
 
 ### Uninstall
@@ -424,13 +424,13 @@ Remove the `plugin` entry from `opencode.json`.
 ### Always-on (optional)
 
 ```bash
-touch ~/.config/opencode/.i-have-adhd-always
+touch ~/.config/opencode/.get-to-the-fucking-point-claude-always
 ```
 
 While the flag exists, the plugin appends the full ruleset to the system prompt every turn — the OpenCode equivalent of the Claude Code `SessionStart` hook. `stop adhd mode` or `normal mode` disables it for the current session; delete the flag to turn always-on off for good:
 
 ```bash
-rm ~/.config/opencode/.i-have-adhd-always
+rm ~/.config/opencode/.get-to-the-fucking-point-claude-always
 ```
 
 </details>
@@ -444,20 +444,20 @@ Pi discovers this repository as a native package: `extensions/` provides the ses
 ### Install
 
 ```bash
-pi install https://github.com/ayghri/i-have-adhd
+pi install https://github.com/quaz579/get-to-the-fucking-point-claude
 ```
 
 Start a new Pi session. Toggle ADHD-friendly output for the current session:
 
 ```text
-/i-have-adhd
+/get-to-the-fucking-point-claude
 ```
 
-The footer shows `● ADHD ON` while the mode is active. Run the command again to turn it off, or be explicit:
+The footer shows `● BLUNT ON` while the mode is active. Run the command again to turn it off, or be explicit:
 
 ```text
-/i-have-adhd on
-/i-have-adhd off
+/get-to-the-fucking-point-claude on
+/get-to-the-fucking-point-claude off
 stop adhd mode
 ```
 
@@ -466,7 +466,7 @@ Like the Claude Code hook, the extension adds the ruleset to the conversation on
 The existing Agent Skills command remains available as an alias:
 
 ```text
-/skill:i-have-adhd
+/skill:get-to-the-fucking-point-claude
 ```
 
 Start a new Pi session with the mode enabled by default:
@@ -481,12 +481,12 @@ pi --adhd
 pi list
 ```
 
-Confirm the GitHub package is listed, then type `/i-have-adhd` and check that `● ADHD ON` appears in the footer.
+Confirm the GitHub package is listed, then type `/get-to-the-fucking-point-claude` and check that `● BLUNT ON` appears in the footer.
 
 ### Update
 
 ```bash
-pi update https://github.com/ayghri/i-have-adhd
+pi update https://github.com/quaz579/get-to-the-fucking-point-claude
 ```
 
 Or update every unpinned Pi package with `pi update --extensions`.
@@ -494,7 +494,7 @@ Or update every unpinned Pi package with `pi update --extensions`.
 ### Uninstall
 
 ```bash
-pi remove https://github.com/ayghri/i-have-adhd
+pi remove https://github.com/quaz579/get-to-the-fucking-point-claude
 ```
 
 ### Always-on (optional)
@@ -502,7 +502,7 @@ pi remove https://github.com/ayghri/i-have-adhd
 Create a flag in Pi's agent configuration directory:
 
 ```bash
-touch ~/.pi/agent/.i-have-adhd-always
+touch ~/.pi/agent/.get-to-the-fucking-point-claude-always
 ```
 
 The extension checks the flag at every new, resumed, forked, or reloaded session. A saved choice for the current session wins over this default, so `stop adhd mode` keeps that session disabled.
@@ -510,10 +510,10 @@ The extension checks the flag at every new, resumed, forked, or reloaded session
 Back to on-demand:
 
 ```bash
-rm ~/.pi/agent/.i-have-adhd-always
+rm ~/.pi/agent/.get-to-the-fucking-point-claude-always
 ```
 
-If `PI_CODING_AGENT_DIR` is set, put `.i-have-adhd-always` in that directory instead. Run `/reload` or start a new session after changing the flag.
+If `PI_CODING_AGENT_DIR` is set, put `.get-to-the-fucking-point-claude-always` in that directory instead. Run `/reload` or start a new session after changing the flag.
 
 </details>
 
@@ -524,24 +524,24 @@ If `PI_CODING_AGENT_DIR` is set, put `.i-have-adhd-always` in that directory ins
 ### Install
 
 ```bash
-omp plugin marketplace add ayghri/i-have-adhd
-omp plugin install --scope user i-have-adhd@i-have-adhd
+omp plugin marketplace add quaz579/get-to-the-fucking-point-claude
+omp plugin install --scope user get-to-the-fucking-point-claude@get-to-the-fucking-point-claude
 ```
 
-Start a new OMP session and run `/i-have-adhd` to toggle the mode.
+Start a new OMP session and run `/get-to-the-fucking-point-claude` to toggle the mode.
 
 ### Update
 
 ```bash
-omp plugin marketplace update i-have-adhd
-omp plugin upgrade --scope user i-have-adhd@i-have-adhd
+omp plugin marketplace update get-to-the-fucking-point-claude
+omp plugin upgrade --scope user get-to-the-fucking-point-claude@get-to-the-fucking-point-claude
 ```
 
 ### Uninstall
 
 ```bash
-omp plugin uninstall --scope user i-have-adhd@i-have-adhd
-omp plugin marketplace remove i-have-adhd
+omp plugin uninstall --scope user get-to-the-fucking-point-claude@get-to-the-fucking-point-claude
+omp plugin marketplace remove get-to-the-fucking-point-claude
 ```
 
 </details>
@@ -553,13 +553,13 @@ omp plugin marketplace remove i-have-adhd
 ### Install
 
 ```bash
-qwen extensions install ayghri/i-have-adhd
+qwen extensions install quaz579/get-to-the-fucking-point-claude
 ```
 
 Qwen Code supports the GitHub shorthand and installs the repository as a
 native extension. The extension discovers the skill under `skills/`.
 
-Type `/i-have-adhd` to invoke the skill explicitly. Installing the extension
+Type `/get-to-the-fucking-point-claude` to invoke the skill explicitly. Installing the extension
 does not change output until the skill is invoked.
 
 ### Verify
@@ -574,18 +574,18 @@ Then start a new Qwen Code session and run:
 /skills
 ```
 
-Confirm that `i-have-adhd` appears in the list.
+Confirm that `get-to-the-fucking-point-claude` appears in the list.
 
 ### Update
 
 ```bash
-qwen extensions update i-have-adhd
+qwen extensions update get-to-the-fucking-point-claude
 ```
 
 ### Uninstall
 
 ```bash
-qwen extensions uninstall i-have-adhd
+qwen extensions uninstall get-to-the-fucking-point-claude
 ```
 
 </details>
@@ -600,21 +600,21 @@ Zed's Agent reads Agent Skills natively: the same `SKILL.md`, no conversion. (Ze
 In the Agent Panel, open the Skills manager and choose **Create skill from URL** (also in the command palette as `agent: create skill from url`), then paste:
 
 ```
-https://github.com/ayghri/i-have-adhd/blob/main/skills/i-have-adhd/SKILL.md
+https://github.com/quaz579/get-to-the-fucking-point-claude/blob/main/skills/get-to-the-fucking-point-claude/SKILL.md
 ```
 
-Save it in **User** scope for every project, or **Project** scope for one. Then type `/i-have-adhd` in the Agent Panel.
+Save it in **User** scope for every project, or **Project** scope for one. Then type `/get-to-the-fucking-point-claude` in the Agent Panel.
 
 Prefer the filesystem? Clone the repo and drop the skill folder into your user skills directory:
 
 ```bash
-git clone https://github.com/ayghri/i-have-adhd
-cp -R i-have-adhd/skills/i-have-adhd ~/.config/zed/skills/
+git clone https://github.com/quaz579/get-to-the-fucking-point-claude
+cp -R get-to-the-fucking-point-claude/skills/get-to-the-fucking-point-claude ~/.config/zed/skills/
 ```
 
 ### Verify
 
-Open the Skills manager in the Agent Panel and confirm `i-have-adhd` is listed. Or type `/` and confirm it appears.
+Open the Skills manager in the Agent Panel and confirm `get-to-the-fucking-point-claude` is listed. Or type `/` and confirm it appears.
 
 ### Update
 
@@ -622,7 +622,7 @@ Re-import from the same URL (overwrites), or re-copy the folder after `git pull`
 
 ### Uninstall
 
-Remove `i-have-adhd` from the Skills manager, or delete `~/.config/zed/skills/i-have-adhd`.
+Remove `get-to-the-fucking-point-claude` from the Skills manager, or delete `~/.config/zed/skills/get-to-the-fucking-point-claude`.
 
 ### Always-on (optional)
 
@@ -657,20 +657,20 @@ Works with any harness that reads agent skills. Swap `-a <agent>` for yours.
 ### Install
 
 ```bash
-npx skills add ayghri/i-have-adhd                  # this workspace
-npx skills add ayghri/i-have-adhd -g               # all projects
-npx skills add ayghri/i-have-adhd -a cursor -y     # one agent only
-npx skills add ayghri/i-have-adhd -a opencode -y
+npx skills add quaz579/get-to-the-fucking-point-claude                  # this workspace
+npx skills add quaz579/get-to-the-fucking-point-claude -g               # all projects
+npx skills add quaz579/get-to-the-fucking-point-claude -a cursor -y     # one agent only
+npx skills add quaz579/get-to-the-fucking-point-claude -a opencode -y
 ```
 
-New agent chat, type `/i-have-adhd`.
+New agent chat, type `/get-to-the-fucking-point-claude`.
 
 Without the CLI, copy the skill folder into whatever path your agent scans:
 
 ```bash
-git clone https://github.com/ayghri/i-have-adhd
+git clone https://github.com/quaz579/get-to-the-fucking-point-claude
 mkdir -p ~/.cursor/skills     # Cursor. Use .agents/skills for OpenCode, or your agent's own path
-cp -R i-have-adhd/skills/i-have-adhd ~/.cursor/skills/
+cp -R get-to-the-fucking-point-claude/skills/get-to-the-fucking-point-claude ~/.cursor/skills/
 ```
 
 ### Verify
@@ -683,15 +683,15 @@ npx skills ls -g    # if installed globally
 ### Update
 
 ```bash
-npx skills update i-have-adhd
+npx skills update get-to-the-fucking-point-claude
 npx skills update -g    # if installed globally
 ```
 
 ### Uninstall
 
 ```bash
-npx skills remove i-have-adhd
-npx skills remove i-have-adhd -g    # if installed globally
+npx skills remove get-to-the-fucking-point-claude
+npx skills remove get-to-the-fucking-point-claude -g    # if installed globally
 ```
 
 ### Always-on (optional)
@@ -722,31 +722,31 @@ Exceptions: explain fully when asked to explain. Confirm before destructive acti
 ## How activation works
 
 1. **Installed, not invoked.** In Claude Code, Qwen Code, and Codex, nothing happens until you invoke the skill explicitly. Claude Code and Qwen Code honor `disable-model-invocation: true` in `SKILL.md`; Codex honors `policy.allow_implicit_invocation: false` in `agents/openai.yaml`. Other harnesses may load every skill's description at startup and activate the skill themselves.
-2. **You invoke it explicitly.** Type `/i-have-adhd` in Claude Code or Qwen Code, or `$i-have-adhd` in Codex. Rules stay on for that session. "stop adhd mode" or "normal mode" turns them off.
-3. **You touch `~/.claude/.i-have-adhd-always`** (Claude Code). A `SessionStart` hook loads the full ruleset from message one, every session.
+2. **You invoke it explicitly.** Type `/get-to-the-fucking-point-claude` in Claude Code or Qwen Code, or `$get-to-the-fucking-point-claude` in Codex. Rules stay on for that session. "stop adhd mode" or "normal mode" turns them off.
+3. **You touch `~/.claude/.get-to-the-fucking-point-claude-always`** (Claude Code). A `SessionStart` hook loads the full ruleset from message one, every session.
 4. **You add the always-on snippet above** (other harnesses). Keeps the core rules in your agent's persistent context.
 
 In Claude Code, Qwen Code, and Codex, no middle ground: if you did not turn it on, it is off.
 
 ## Troubleshooting
 
-**`/i-have-adhd` not in autocomplete.** Restart the agent. The plugin index is read at startup.
+**`/get-to-the-fucking-point-claude` not in autocomplete.** Restart the agent. The plugin index is read at startup.
 
-**Always-on flag has no effect.** Update the plugin (`claude plugin marketplace update i-have-adhd`) and restart. Hooks are read at startup, and the flag needs the plugin version that ships `hooks/hooks.json`.
+**Always-on flag has no effect.** Update the plugin (`claude plugin marketplace update get-to-the-fucking-point-claude`) and restart. Hooks are read at startup, and the flag needs the plugin version that ships `hooks/hooks.json`.
 
 **`claude plugin marketplace add` fails.** Use the `owner/repo` form. A local path must point at the repo root, not `.claude-plugin/`.
 
-**Installed but replies still preamble.** Open a new session. If it still drifts, tighten the wording in `skills/i-have-adhd/SKILL.md`.
+**Installed but replies still preamble.** Open a new session. If it still drifts, tighten the wording in `skills/get-to-the-fucking-point-claude/SKILL.md`.
 
-**Want different rules.** Fork, edit `skills/i-have-adhd/SKILL.md`, then swap your copy in:
+**Want different rules.** Fork, edit `skills/get-to-the-fucking-point-claude/SKILL.md`, then swap your copy in:
 
 ```bash
-claude plugin uninstall i-have-adhd            # drop the upstream copy first:
-claude plugin marketplace remove i-have-adhd   # fork and upstream share both names
-claude plugin marketplace add <your-username>/i-have-adhd
-claude plugin install i-have-adhd@i-have-adhd
+claude plugin uninstall get-to-the-fucking-point-claude            # drop the upstream copy first:
+claude plugin marketplace remove get-to-the-fucking-point-claude   # fork and upstream share both names
+claude plugin marketplace add <your-username>/get-to-the-fucking-point-claude
+claude plugin install get-to-the-fucking-point-claude@get-to-the-fucking-point-claude
 ```
 
-Restart, then re-invoke `/i-have-adhd`.
+Restart, then re-invoke `/get-to-the-fucking-point-claude`.
 
 **Skill missing after `npx skills add`.** Start a new agent chat. Skills are indexed at session start. Confirm the folder landed where your agent scans (`~/.cursor/skills/` for Cursor, `.agents/skills/` for OpenCode) and that the frontmatter `name` matches the folder name.

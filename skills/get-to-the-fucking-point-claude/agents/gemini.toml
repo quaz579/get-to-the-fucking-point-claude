@@ -1,5 +1,5 @@
-# Gemini CLI custom command for i-have-adhd.
-# Install: copy to ~/.gemini/commands/i-have-adhd.toml, then type /i-have-adhd.
+# Gemini CLI custom command for get-to-the-fucking-point-claude.
+# Install: copy to ~/.gemini/commands/get-to-the-fucking-point-claude.toml, then type /get-to-the-fucking-point-claude.
 # Self-contained so it works as a global command from any directory.
 
 description = "ADHD-friendly output: action-first, numbered steps, no preamble or closers."
